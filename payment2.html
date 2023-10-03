@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="stationary,school,study"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title src="image/logo.png">CARTOLERIA - Payment</title>
+
+    <!--icon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'/>
+
+    <!--logo-->
+    <link rel="icon" href="image/logo.png" sizes="32x32" type="image/png">
+
+    <!--css file-->
+    <link rel="stylesheet" href="css/payment.css"/>
+    <link rel="stylesheet" href="css/header.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+
+    <style>
+        header{
+            box-shadow: 0 5px 25px #c4dfdf;
+        }
+        html{
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header section start-->
+    <div class="container"></div>
+    <header> 
+        <div id="logoimage">
+            <a href="index.html"><img src="image/CARTOLERIA3.png" alt="cartoleria"></a>
+        </div>
+        
+
+        <div id = "navicon">
+            
+            
+            <div class="navicon">
+                <a href="payment.html" class='bx bxs-cart'><span class="count">0</span></a>
+            </div>
+            <div class="navicon"><a href="signin.html" class='bx bxs-user'></a></div>
+            <div class="navicon openButton"><a class='bx bx-menu' id="openButton" onclick="openMenu()" style="cursor: pointer;"></a></div>
+        </div>
+
+        <div class="navigators open">
+
+            <div class="nav">
+                <a class='bx bxs-home-smile' ></a>
+                <a id = "home" href="index.html">Home</a>
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-detail'></a> <!--About Icon-->
+                <a id ="about" href="about.html">About</a> <!--About-->
+            </div>
+    
+            <div class="nav">
+                <a class='bx bxs-category' href="product.html"></a>  <!--Product icon-->
+                <a class="subbtn" id = "product" href="product.html">Product</a> <!--Product-->
+                <ul class="subproduct" id="category-list">
+                    <li class="subitem">
+                        <a href="colouring.html" data-category="colouring" >Colouring</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="paper.html" data-category="paper" id="paper" >Paper</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="eraser.html" data-category="eraser_correction" id="eraser&correction_tape" >Eraser & Correction Tape</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="pen_pencil.html" data-category="pen_highlighter" id="pen&highlighter" >Pen & Highlighter</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="label.html" data-category="label_note" id="label&note" >Label & Note</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="measurement.html" data-category="measurement" id="measurement" >Measurement</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-contact' ></a> <!--Contact Us icon-->
+                <a id="contact" href="contact_us.html">Contact Us</a> <!--Contact Us-->
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-package'></a><!--Delivery icon-->
+                <a id = "delivery" href="delivery.html">Delivery</a><!--Delivery-->
+            </div>
+
+            <!--
+            <div class="search-container closeBox" id="search-container">
+                <div class="close-container">
+                    <i class='bx bx-x' id="closeButton"></i>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="searchBox" placeholder="Search here..."id="search-item" onkeyup="search()" />
+                </div>
+                <i class='bx bx-search-alt-2 search-icon'></i>
+            </div>-->
+        </div><!--End of the navigotion list-->
+    </header>
+    <!--header section start-->
+
+    <!--after selected debit card-->
+    <div class="info" id="debit-card-info">
+        <h3 class="pay-title">Debit Card Info</h3>
+        <table>
+            <form>
+                <tr>
+                    <td><h5>AMOUNT</h5></td>
+                    <td><input class="pay-logo" type="text" value="RM.00" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'RM.00';}" required=""></td>
+                                                        
+                </tr>
+                <tr>
+                    <td><h5>NAME ON CARD</h5></td>
+                    <td><input class="name-on-card" type="text" value="Enter the name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter the name';}" required=""></td>
+                </tr>
+                <tr>
+                    <td><h5>CARD NUMBER</h5></td>
+                    <td><input class="card-no" type="text" value="0000-0000-0000-0000" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '0000-0000-0000-0000';}" required=""></td>
+                </tr>
+                <tr>
+                    <td><h5>EXPIRATION</h5></td>
+                    <td><input type="number" class="expi" type="text" value="0" min="1" /><br>
+                        <input type="number" class="expi" type="text" value="2000" min="1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><h5>CVV NUMBER</h5></td>
+                    <td><input type="password" value="xxx" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xxx';}" required=""></td>
+                </tr>
+                <tr>
+                    <td><div class="clear"></div></td>
+                </tr>
+            </form>
+        </table>
+        <a href="payment4.html"><input type="submit" value="SEND"></a>
+        
+    </div>
+
+    <!--footer section start-->
+    <div class="footer">
+        <div class="col-left" style="float: left;">
+            <div class="col" style="float: left;">
+                <h3>Main Links</h3>
+                <a href="about.html">About</a>
+                <a href="product.html">Product</a>
+                <a href="delivery.html">Delivery</a>
+            </div>
+            <div class="col" style="float: right;">
+                <h3>Extra Links</h3>
+                <a href="signin.html">Account</a>
+                <a href="forgot.html">Forgot password</a>
+                <a href="signup.html">Register</a>
+                <a href="contact_us.html">Ask questions</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+
+        </div>
+
+        <div class="col-right" style="right: auto;">
+            <div class="col" >
+                <h3>Contact Info</h3>
+    
+                <h4><i class='bx bxl-whatsapp'></i> WhatsApp </h4>
+                <a href="https://wa.me/60184020090" id="contact-icon" target="_blank">018-4020090 </a>
+    
+                <h4><i class='bx bx-envelope' ></i> Email </h4>
+                <a href="mailto:cartoleria1222@gmail.com" id="contact-icon" target="_blank">cartoleria1222@gmail.com</a>
+    
+                <h4><i class='bx bx-current-location'></i>Location</h4>
+                <a href="https://www.google.com/maps/d/embed?mid=101rY3UsWWq4LcNh7o707mKT6AXLNRQ8&hl=en&ehbc=2E312F" id="contact-icon" target="_blank">77, Lorong Lembah Permai 3,<br> 11200 Tanjung Bungah, Pulau Pinang </a>
+            </div>
+        </div>
+        
+        <footer>
+            Created by &copy; CARTOLERIA Sdn.Bhd
+        </footer>
+
+    </div>
+    <!--footer section end-->
+
+    <!--java for every page to show the title 'come back'-->
+    <script>
+        let originalTitle = document.title;
+
+        function handleVisibilityChange() {
+        if (document.hidden) {
+            document.title = 'Come Back!'; 
+        } else {
+            document.title = originalTitle; 
+        }
+        }
+        
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+    </script>
+
+
+</body>
+</html>

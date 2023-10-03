@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title src="image/logo.png">CARTOLERIA - Contact Us</title>
+    
+    <!--icon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--logo-->
+    <link rel="icon" href="image/logo.png" sizes="32x32" type="image/png">
+
+    <!--css file-->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/media.css"/>
+
+    <style>
+        header{
+            box-shadow: 0 5px 25px #c4dfdf;
+        }
+        html{
+            background-color: #f0f0f0;
+        }
+    </style>
+
+</head>
+<body>
+    <!--header section start-->
+    <div class="container"></div>
+    <header> 
+        <div id="logoimage">
+            <a href="index.html"><img src="image/CARTOLERIA3.png" alt="cartoleria"></a>
+        </div>
+        
+
+        <div id = "navicon">
+            
+            <div class="navicon">
+                <a href="payment.html" class='bx bxs-cart'><span class="count">0</span></a>
+            </div>
+            <div class="navicon"><a href="signin.html" class='bx bxs-user'></a></div>
+            <div class="navicon openButton"><a class='bx bx-menu' id="openButton" onclick="openMenu()" style="cursor: pointer;"></a></div>
+        </div>
+
+        <div class="navigators open">
+
+            <div class="nav">
+                <a class='bx bxs-home-smile' ></a>
+                <a id = "home" href="index.html">Home</a>
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-detail'></a> <!--About Icon-->
+                <a id ="about" href="about.html">About</a> <!--About-->
+            </div>
+    
+            <div class="nav">
+                <a class='bx bxs-category' href="product.html"></a>  <!--Product icon-->
+                <a class="subbtn" id = "product" href="product.html">Product</a> <!--Product-->
+                <ul class="subproduct" id="category-list">
+                    <li class="subitem">
+                        <a href="colouring.html" data-category="colouring" >Colouring</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="paper.html" data-category="paper" id="paper" >Paper</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="eraser.html" data-category="eraser_correction" id="eraser&correction_tape" >Eraser & Correction Tape</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="pen_pencil.html" data-category="pen_highlighter" id="pen&highlighter" >Pen & Highlighter</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="label.html" data-category="label_note" id="label&note" >Label & Note</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="measurement.html" data-category="measurement" id="measurement" >Measurement</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-contact' ></a> <!--Contact Us icon-->
+                <a id="contact" href="contact_us.html">Contact Us</a> <!--Contact Us-->
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-package'></a><!--Delivery icon-->
+                <a id = "delivery" href="delivery.html">Delivery</a><!--Delivery-->
+            </div>
+
+            <!--
+            <div class="search-container closeBox" id="search-container">
+                <div class="close-container">
+                    <i class='bx bx-x' id="closeButton"></i>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="searchBox" placeholder="Search here..."id="search-item" onkeyup="search()" />
+                </div>
+                <i class='bx bx-search-alt-2 search-icon'></i>
+            </div>-->
+        </div><!--End of the navigotion list-->
+    </header>
+    <!--header section end-->
+
+    <!--
+    <div class="contact_methods">
+        <div class="container">
+            <a class="whatsapp" href="https://wa.me/60184020090"><img class="icon" src="/image/whatsapp-icon.png" alt="WhatsApp">  Drop Us A WhatsApp</a>
+
+            <br>
+            <a class="email" href="mailto:cartoleria1222@gmail.com"><img class="icon" src="/image/email-icon.png" alt="Email">  Write Us An Email</a> 
+    
+            <br>
+            <a class="call" href="tel:60184020090"><img class="icon" src="/image/phone-icon.png" alt="Phone">  Give Us A Call</a>
+        </div>
+        
+    </div>-->
+
+    <!--contact us section start-->
+    <div class="header_start">
+        <h1>We'd Love To Hear From You!</h1>
+    </div>
+
+    <div class="info">
+        <h3>Contact info</h3>
+    
+            <p><i class='bx bxl-whatsapp'></i> WhatsApp </p>
+            <a href="https://wa.me/60184020090" id="contact-icon" target="_blank">018-4020090 </a>
+
+            <p><i class='bx bx-envelope' ></i> Email </p>
+            <a href="mailto:cartoleria1222@gmail.com" id="contact-icon" target="_blank">cartoleria1222@gmail.com</a>
+
+            <p><i class='bx bx-current-location'></i>Location</p>
+            <a id="contact-icon">77, Lorong Lembah Permai 3,<br> 11200 Tanjung Bungah, Pulau Pinang </a>
+    </div>
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/d/embed?mid=101rY3UsWWq4LcNh7o707mKT6AXLNRQ8&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+
+    <div class="feedback_form">
+        <div class="header_feedback">
+            <h1>Give Us Some Feedback!</h1>
+        </div>
+
+        <form class="form" id="feedback-form" onsubmit="return sendMail()">
+            <div class="name">
+                <input type="text" id="from_name" placeholder="Your Name" required>                 
+            </div>
+
+            <div class="email">
+                <input type="email" id="email_id" placeholder="Email Address" required>
+            </div>
+
+            <div>
+                <textarea cols="15" rows="5" id="message" placeholder="Enter your opinions here" required></textarea>
+            </div>
+
+            <div>
+                <button type="submit">Send</button>
+            </div>  
+        </form>
+    
+        <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("17H0rMVcMdizRAPsl");
+        })();
+        </script>
+    
+        <script>
+            function sendMail(){
+                var params= {
+                    from_name : document.getElementById("from_name").value,
+                    email_id : document.getElementById("email_id").value,
+                    message : document.getElementById("message").value
+                }
+                emailjs.send("service_98s5hqn", "template_9g1uhlc", params).then(function (res) {
+                    alert("Feeback Sent Successfully!");
+                }, function (error){
+                    alert("Error: " + error)
+                });
+    
+                return false;
+            }
+        </script>
+
+        <footer>
+            Created by &copy; CARTOLERIA Sdn.Bhd
+        </footer>
+    </div>
+    <!--contact section end-->
+
+    <!--java for every page to show the title 'come back'-->
+    <script>
+        let originalTitle = document.title;
+
+        function handleVisibilityChange() {
+        if (document.hidden) {
+            document.title = 'Come Back!'; 
+        } else {
+            document.title = originalTitle; 
+        }
+        }
+        
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+    </script>
+
+</body>
+</html>

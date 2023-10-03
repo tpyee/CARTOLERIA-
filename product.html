@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="stationary,school,study"/>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title src="image/logo.png">CARTOLERIA - Products</title>
+
+    <!--icon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--logo-->
+    <link rel="icon" href="image/logo.png" sizes="32x32" type="image/png">
+    
+    <!--css file-->
+    <link rel="stylesheet" href="css/arragement.css"/> 
+    <link rel="stylesheet" href="css/sortliststyle.css"/> 
+    <link rel="stylesheet" href="css/style.css"/> 
+    <link rel="stylesheet" href="css/searchStyle.css"/> 
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/media.css"/>
+
+    <!--java file-->
+    <script src="js/category.js"></script>
+    <script src="js/sorting.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/quantityChange.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/search_engine.js"></script>
+
+    <!--to control the title name-->
+    <script>                            
+        function titleChange(category) {
+        const title = document.getElementById('category-title');
+
+        if (category === "colouring") 
+        {
+            category = category.toUpperCase();
+            title.innerHTML = category;
+
+        } 
+        else if(category === "paper")
+        {
+            category = category.toUpperCase();
+            title.innerHTML = category;
+        }
+        else if(category === "Eraser & Correction Tape")
+        {
+            category = category.toUpperCase();
+            title.innerHTML = category;
+        }
+        else if(category === "Pen & Highlighter")
+        {
+            category = category.toUpperCase();
+            title.innerHTML = category;
+        }
+        else if(category === "Label & Note")
+        {
+            category = category.toUpperCase();
+            title.innerHTML = category;
+        }
+        else if(category === "Measurement")
+        {
+            category = category.toUpperCase();
+            title.innerHTML = category;
+        }
+        else 
+        {
+            // Default title for other categories or no category selected
+            title.innerHTML = "ALL PRODUCTS";
+        }
+        }
+    </script>
+
+    <!--control the open and close of the add button-->
+    <script>
+        function addButton(button)
+        {
+            const addButton  = button;
+            const quantitySelector = button.nextElementSibling;
+
+            if (quantitySelector.style.display === 'block')
+            {
+                quantitySelector.style.display = 'none';
+            }
+            else {
+                quantitySelector.style.display = 'block';
+                addButton.style.display = 'none';
+            }
+
+        }
+    </script>
+    
+    <style>
+        header{
+            box-shadow: 0 5px 25px #c4dfdf;
+        }
+        html{
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--header section start-->
+    <div class="container"></div>
+    <header> 
+        <div id="logoimage">
+            <a href="index.html"><img src="image/CARTOLERIA3.png" alt="cartoleria"></a>
+        </div>
+        
+
+        <div id = "navicon">
+            <div class="navicon">
+                <a href="#" class='bx bx-search-alt-2 searchIcon open'  id="search-icon"></a>
+            </div>
+            <div class="navicon">
+                <a href="payment.html" class='bx bxs-cart'><span class="count">0</span></a>
+            </div>
+            <div class="navicon"><a href="signin.html" class='bx bxs-user'></a></div>
+            <div class="navicon openButton"><a class='bx bx-menu' id="openButton" onclick="openMenu()" style="cursor: pointer;"></a></div>
+        </div>
+
+        <div class="navigators openNav">
+
+            <div class="nav">
+                <a class='bx bxs-home-smile' ></a>
+                <a id = "home" href="index.html">Home</a>
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-detail'></a> <!--About Icon-->
+                <a id ="about" href="about.html">About</a> <!--About-->
+            </div>
+    
+            <div class="nav">
+                <a class='bx bxs-category' href="product.html"></a>  <!--Product icon-->
+                <a class="subbtn" id = "product" href="product.html">Product</a> <!--Product-->
+                <ul class="subproduct" id="category-list">
+                    <li class="subitem">
+                        <a href="#" data-category="colouring"  onclick="titleChange('colouring')">Colouring</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" data-category="paper" id="paper" onclick="titleChange('paper')">Paper</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" data-category="eraser_correction" id="eraser&correction_tape" onclick="titleChange('Eraser & Correction Tape')">Eraser & Correction Tape</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" data-category="pen_highlighter" id="pen&highlighter" onclick="titleChange('Pen & Highlighter')">Pen & Highlighter</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" data-category="label_note" id="label&note" onclick="titleChange('Label & Note')">Label & Note</a>
+                    </li>
+                    <li class="subitem">
+                        <a href="#" data-category="measurement" id="measurement" onclick="titleChange('Measurement')">Measurement</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-contact' ></a> <!--Contact Us icon-->
+                <a id="contact" href="contact_us.html">Contact Us</a> <!--Contact Us-->
+            </div>
+
+            <div class="nav">
+                <a class='bx bxs-package'></a><!--Delivery icon-->
+                <a id = "delivery" href="delivery.html">Delivery</a><!--Delivery-->
+            </div>
+        </div><!--End of the navigotion list-->
+    </header>
+    <!--header section start-->
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="box">
+    <div class="search-container closeBox" id="search-container">
+              <div class="close-container">
+                <i class='bx bx-x' id="closeButton"></i>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="searchBox" placeholder="Search here..."id="search-item" onkeyup="search()" />
+                </div>
+                <i class='bx bx-search-alt-2 search-icon'></i>
+            </div>
+         </div>
+    
+    <!--product start-->
+    <div class="title">  <!--Page Title-->
+        <h2 style="font-size: 30px;" ><a href="#" id="category-title">ALL PRODUCTS</a></h2>
+        <button id="sort-button">Sort</button>
+    </div>
+    
+    <div id="sort-list">  <!--Sorting-->
+        <ul id="sorting-options">  
+            <li><a href="#" data-sort="alphabet-asc">Alphabet A to Z</a></li>
+            <li><a href="#" data-sort="alphabet-desc">Alphabet Z to A</a></li>
+            <li><a href="#" data-sort="price-high-to-low">Highest Price to Lowest Price</a></li>
+            <li><a href="#" data-sort="price-low-to-high">Lowest Price to Highest Price</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    <div class="all-products" id="product-list"> 
+        <div class="products eraser" data-category="eraser_correction">
+            <a href="#">
+                <img src="image/eraser1.jpg" alt="Pentel Soft Eraser Hi Polymer"/> <!--Pentel Soft Eraser Hi Polymer-->
+            </a>
+            <div class="product-detail">
+                <h3 id="product-name">
+                    <a href="#">Pentel Soft Eraser Hi Polymer</a>
+                </h3>
+                <p>8g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: <span id="product-Quantity">100</span></p>
+            </div>
+            <div class="addButton">
+                <button class="add-cart cart1" id="addCart_button" onclick="addButton(this)" >Add</button>
+                    <div class="quantity_selector" id="quantity_selector" style="display:none;">
+                        <span class="minus">-</span>
+                        <span class="num"></span>
+                        <span class="plus">+</span>
+                    </div>
+            </div>
+        </div>
+    
+        <div class="products eraser" data-category="eraser_correction">
+            <a href="#">
+                <img src="image/eraser2.jpg" alt="Pentel Light Eraser Hi Polymer"/>  <!--Pentel Light Eraser Hi Polymer-->
+            </a>
+            <div class="product-detail">
+                <h3 id="product-name">
+                <a href="#">Pentel Light Eraser Hi Polymer</a>
+                </h3>
+                <p>8g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: <span>100</span></p>
+            </div>
+            <div class="addButton">
+                <button class="add-cart cart2" id="addCart_button" onclick="addButton(this)">Add</button>
+                    <div class="quantity_selector" id="quantity_selector">
+                        <span class="minus">-</span>
+                        <span class="num"></span>
+                        <span class="plus">+</span>
+                     </div>
+            </div>
+        </div>
+    
+        <div class="products eraser" data-category="eraser_correction">
+            <a href="#">
+                <img src="image/eraser3.jpg" alt="Stabilo Exam Grade Eraser"/>  <!--Stabilo Exam Grade Eraser-->
+            </a>
+            <div class="product-detail">
+                <h3 id="product-name">
+                    <a href="#">Stabilo Exam Grade Eraser</a>
+                </h3>
+                <p>8g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector" >
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products eraser" data-category="eraser_correction">
+            <a href="#">
+                <img src="image/eraser4.jpg" alt="Pilot Foam Eraser">  <!--Pilot Foam Eraser-->
+            </a>
+            <div class="product-detail">
+                <h3 id="product-name">
+                    <a href="#">Pilot Foam Eraser</a>
+                </h3>
+                <p>8g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products glue" data-category="label_note">
+            <a href="#">
+                <img src="image/artline gluestick.jpg" alt="Artline Glue Stick"/>  <!--Artline Glue Stick-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Artline Glue Stick</a>
+                </h3>
+                <p>8g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products glue" data-category="label_note">
+            <a href="#">
+                <img src="image/disapper-artline.jpg" alt="Artline Disappearing Glue Stick">  <!--Artline Disappearing Glue Stick-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Artline Disappearing Glue Stick</a>
+                </h3>
+                <p>8g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products glue" data-category="label_note">
+            <a href="#">
+                <img src="image/nusign glue.jpg" alt="Nusign Magic Glue Stick">  <!--Nusign Magic Glue Stick-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Nusign Magic Glue Stick</a>
+                </h3>
+                <p>15g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products glue" data-category="label_note">
+            <a href="#">
+                <img src="image/roller glue.jpg" alt="Chunbe Roller Stationary Glue">  <!--Chunbe Roller Stationary Glue-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Chunbe Roller Stationary Glue</a>
+                </h3>
+                <p>15g</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products glue" data-category="label_note">
+            <a href="#">
+                <img src="image/quality bond.jpg" alt="UNI Classic Quality Bond">  <!--UNI Classic Quality Bond-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">UNI Classic Quality Bond</a>
+                </h3>
+                <p>170ml</p>
+                <p class="price">Price: RM 5.20</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products glue" data-category="label_note">
+            <a href="#">
+                <img src="image/uhu stick.jpg" alt="UHU Stick">   <!--UHU Stick-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">UHU Glue Stic</a>
+                </h3>
+                <p>8.2g</p>
+                <p class="price">Price: RM 3.60</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products glue" data-category="label_note">
+            <a href="#">
+                <img src="image/uhu glue pen.jpg" alt="UHU Glue Pen">  <!--UHU Glue Pen-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">UHU Glue Pen</a>
+                </h3>
+                <p>50ml</p>
+                <p class="price">Price: RM 1.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products stickynote" data-category="label_note">
+            <a href="#">
+                <img src="image/post-it sticky note blue.jpg" alt="post-it stick note blue">  <!--post-it stick note blue-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Post-it Stick Note (Blue)</a>
+                </h3>
+                <p>76mm x 76mm (100pcs)</p>
+                <p class="price">Price: RM 4.20</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products stickynote" data-category="label_note">
+            <a href="#">
+                <img src="image/post-it sticky note pink.jpg" alt="post-it stick note pink">  <!--post-it stick note pink-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Post-it Stick Note (Pink)</a>
+                </h3>
+                <p>76mm x 76mm (100pcs)</p>
+                <p class="price">Price: RM 4.20</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products highlighter" data-category="pen_highlighter">
+            <a href="#">
+                <img src="image/artline_highlighter.jpg" alt="artline_highlighter">  <!--artline_highlighter-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Artline Supreme Highlighter</a>
+                </h3>
+                <p>CHISEL 1-4mm</p>
+                <p class="price">Price: RM 10.40</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products highlighter" data-category="pen_highlighter">
+            <a href="#">
+                <img src="image/pilot_highlighter.jpg" alt="pilot_highlighter">  <!--pilot_highlighter-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Pilot FriXion Soft Color Erasable Highlighter</a>
+                </h3>
+                <p>Erasable Ink</p>
+                <p class="price">Price: RM 24.00</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products highlighter" data-category="pen_highlighter">
+            <a href="#">
+                <img src="image/staedtler_highlighter.jpg" alt="staedtler_highlighter">   <!--staedtler_highlighter-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Staedtler Highlighter Textsurfer Classic</a>
+                </h3>
+                <p>CHISEL 1-5mm</p>
+                <p class="price">Price: RM 8.90</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products highlighter" data-category="pen_highlighter">
+            <a href="#">
+                <img src="image/zebra_mildliner.jpg" alt="zebra_mildliner">   <!--zebra_mildliner-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Mildliner WKT7-5C-YC Gentle Higlighter</a>
+                </h3>
+                <p>CHISEL 1-4mm</p>
+                <p class="price">Price: RM 29.00</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="products highlighter" data-category="pen_highlighter">
+            <a href="#">
+                <img src="image/zebra_mildliner(2).jpg" alt="zebra_mildliner">   <!--zebra_mildliner-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Mildliner WKT7-5C-NTC Neutral Higlighter</a>
+                </h3>
+                <p>CHISEL 1-4mm</p>
+                <p class="price">Price: RM 29.00</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products colorpen" data-category="colouring">
+            <a href="#">
+                <img src="image/stabilocolorpen.jpg" alt="stabilocolorpen">   <!--stabilocolorpen-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Stabilo Fineliner Point (10 Color)</a>
+                </h3>
+                <p>Line width 0.4 mm</p>
+                <p class="price">Price: RM 26.00</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products colorpen" data-category="colouring">
+            <a href="#">
+                <img src="image/sarasa_vintagecolorpen.jpg" alt="sarasa_vintagecolorpen">   <!--sarasa_vintagecolorpen-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Zebra Sarasa Vintage Gel Pen</a>
+                </h3>
+                <p>Ball: 0.5mm</p>
+                <p class="price">Price: RM 20.00</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products paper" data-category="paper">
+            <a href="#">
+                <img src="image/colorpaper.jpeg.jpg" alt="colorpaper">   <!--colorpaper-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">A4 COLOUR PAPER 20PCS / PACK 80GSM</a>
+                </h3>
+                <p>MIX COLOUR 40's</p>
+                <p class="price">Price: RM 4.00</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products pen_highlighter" data-category="pen_highlighter">
+            <a href="#">
+                <img src="image/pilot_markerpen(black).jpg" alt="pilot_markerpen(black)">   <!--pilot_markerpen(black)-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Pilot V Board Master Marker Pen (Black)</a>
+                </h3>
+                <p>Refillable</p>
+                <p class="price">Price: RM 4.30</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products pen_highlighter" data-category="pen_highlighter">
+            <a href="#">
+                <img src="image/pilot_markerpen(blue).jpg" alt="pilot_markerpen(blue)">   <!--pilot_markerpen(blue)-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Pilot V Board Master Marker Pen (Blue)</a>
+                </h3>
+                <p>Refillable</p>
+                <p class="price">Price: RM 4.30</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products measurement" data-category="measurement">
+            <a href="#">
+                <img src="image/decamax_ruler(15cm).jpg" alt="decamax_ruler(15cm)">   <!--decamax_ruler(15cm)-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Decamax Flexible Plastic Ruler</a>
+                </h3>
+                <p>15cm</p>
+                <p class="price">Price: RM 0.60</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="products measurement" data-category="measurement">
+            <a href="#">
+                <img src="image/decamax_ruler(20cm).jpg" alt="decamax_ruler(20cm)">   <!--decamax_ruler(20cm)-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Decamax Flexible Plastic Ruler</a>
+                </h3>
+                <p>20cm</p>
+                <p class="price">Price: RM 0.80</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products eraser_correction" data-category="eraser_correction">
+            <a href="#">
+                <img src="image/bigmac_correctiontape(black).jpg" alt="bigmac_correctiontape(black)">   <!--bigmac_correctiontape(black)-->
+            </a>
+            <div class="product-detail">
+                <h3>
+                    <a href="#">Toyo BigMac Correction Tape</a>
+                </h3>
+                <p>Size 5mm x 30M</p>
+                <p class="price">Price: RM 5.60</p>
+                <p>Quantity: 100</p>
+            </div>
+            <div class="addButton">
+                <button id="addCart_button" onclick="addButton(this)">Add</button>
+                <div class="quantity_selector" id="quantity_selector">
+                    <span class="minus">-</span>
+                    <span class="num"></span>
+                    <span class="plus">+</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer section start-->
+    <div class="footer">
+        <div class="col-left" style="float: left;">
+            <div class="col" style="float: left;">
+                <h3>Main Links</h3>
+                <a href="about.html">About</a>
+                <a href="product.html">Product</a>
+                <a href="delivery.html">Delivery</a>
+            </div>
+            <div class="col" style="float: right;">
+                <h3>Extra Links</h3>
+                <a href="signin.html">Account</a>
+                <a href="forgot.html">Forgot password</a>
+                <a href="signup.html">Register</a>
+                <a href="contact_us.html">Ask questions</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+
+        </div>
+
+        <div class="col-right" style="right: auto;">
+            <div class="col" >
+                <h3>Contact Info</h3>
+    
+                <h4><i class='bx bxl-whatsapp'></i> WhatsApp </h4>
+                <a href="https://wa.me/60184020090" id="contact-icon" target="_blank">018-4020090 </a>
+    
+                <h4><i class='bx bx-envelope' ></i> Email </h4>
+                <a href="mailto:cartoleria1222@gmail.com" id="contact-icon" target="_blank">cartoleria1222@gmail.com</a>
+    
+                <h4><i class='bx bx-current-location'></i>Location</h4>
+                <a href="https://www.google.com/maps/d/embed?mid=101rY3UsWWq4LcNh7o707mKT6AXLNRQ8&hl=en&ehbc=2E312F" id="contact-icon" target="_blank">77, Lorong Lembah Permai 3,<br> 11200 Tanjung Bungah, Pulau Pinang </a>
+            </div>
+        </div>
+        
+        <footer>
+            Created by &copy; CARTOLERIA Sdn.Bhd
+        </footer>
+
+    </div>
+    <!--footer section end-->
+
+    <!--java for every page to show the title 'come back'-->
+    <script>
+        let originalTitle = document.title;
+
+        function handleVisibilityChange() {
+        if (document.hidden) {
+            document.title = 'Come Back!'; 
+        } else {
+            document.title = originalTitle; 
+        }
+        }
+        
+        document.addEventListener('visibilitychange', handleVisibilityChange);
+    </script>
+    
+</body>
+</html>
