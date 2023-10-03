@@ -1,0 +1,266 @@
+@charset "utf-8";
+ 
+/*import a font family*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+*
+{
+    font-family: poppins;
+    font-weight: bold;
+}
+
+.container
+{
+    display: block;
+}
+header
+{
+    position: fixed;
+    background-color: snow;
+    z-index: 999;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 5px 25px rgb(0 0 0 20%);
+    transition: 0.6s;
+}
+
+header div#logoimage a img
+{
+    width: 250px;
+    display: flex;
+}
+
+header div.navigators
+{
+    position: relative;
+    line-height: 62px;
+    display:flex;
+    justify-content: left;
+    user-select: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+div.nav a 
+{
+    color:  #387070;
+    text-decoration: none;
+    font-size: 12pt;
+    padding:20px;
+    font-weight: normal;
+}
+
+c
+{
+    background-color: #73abab80;
+    transition: 0.2s;
+}
+
+div.nav a:active
+{
+    color:#c4dfdf;
+    background-color: #387070;
+}
+ul.subproduct
+{
+    padding:0;
+}
+
+div.nav .subproduct
+{
+    position:absolute;
+    background-color: snow;
+    margin: 0%;
+    list-style: none;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.29);
+    display: none;
+}
+
+div.nav:hover .subproduct
+{
+    display: block;
+}
+
+div.nav .subproduct .subitem
+{
+    position:relative;
+}
+
+div.nav .subproduct .subitem a:hover
+{
+    display: block;
+    transition: none;
+    font-size: 20px;
+    padding-top: 0;
+    padding-bottom:0;
+}
+
+div.nav .subproduct .subitem a:last-child:hover
+{
+    border-radius: 0 0 8px 8px;
+}
+
+div.nav .subproduct .subitem a:active
+{
+    display: block;
+    transition: 0.15s;
+    color: #c4dfdf;
+    background-color: #387070;
+    font-size: 20px;
+}
+div.nav .subproduct .subitem a:last-child:active
+{
+    border-radius: 0 0 8px 8px;
+}
+
+/*NAV ICON*/
+div#navicon
+{
+    display: flex;
+    flex-direction: row;
+    order:3;
+    align-items: center;
+}
+
+div.navicon a
+{
+    color:  #387070;
+    text-decoration: none;
+    font-size:20px;
+    padding:20px;
+}
+
+div.navicon a:hover
+{
+    background-color: #73abab80;
+}
+
+div.navicon a:active
+{
+    color:#c4dfdf;
+    background-color: #387070;
+}
+
+/*PAYMENT ICON*/
+a.bxs-credit-card
+{
+    font-size:20px;
+    display: none;
+}
+
+/*DELIVERY ICON*/
+a.bxs-package
+{
+    display: none;
+    font-size:20px;
+}
+
+/*C0NTACT ICON*/
+a.bxs-contact
+{
+    display: none;
+    font-size:20px;
+}
+
+/*PRODUCT ICON*/
+a.bxs-category
+{
+    display: none;
+    font-size:20px;
+}
+
+/*ABOUT ICON*/
+a.bxs-detail
+{
+    display: none;
+    font-size:20px;
+}
+
+/*HOME ICON*/
+a.bxs-home-smile
+{
+    display: none;
+    font-size:20px;
+}
+
+
+ /*search box*/
+#searchBox {
+    right: 250px;
+    height: 30px;
+    max-width: 555px;
+    width: 100%;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.2s linear;
+    display:flex;
+  }
+
+/* ========
+    FOOTER 
+   ========
+*/
+
+.footer {
+    padding-top: 4%;
+
+    /* Support old browser */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('/image/footer.jpeg') no-repeat;
+    /* Support latest browser */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/image/footer.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.col-left {
+    padding-left: 9%;
+}
+
+
+.footer .col {
+    display: grid;
+    -ms-grid-columns: (minmax(23rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(23em, 1fr));
+}
+
+.footer h3{
+    color: white;
+    font-size: 20pt;
+}
+
+.footer a{
+    color: beige;
+    font-size: 10pt;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.col-left a{
+    margin: 3%;
+}
+
+.footer h4{
+    color: beige;
+    font-size: 10pt;
+}
+
+.footer a:hover{
+    padding-left: 10px;
+    text-decoration: underline;
+}
+
+footer{
+    text-align: center;
+    font-size: 9pt;
+    color: whitesmoke;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}

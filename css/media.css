@@ -1,0 +1,187 @@
+/* ===============================
+	      desktop / tablet
+   ===============================
+*/
+
+
+
+@media screen and (max-width:1164px)
+{
+
+header div#logoimage a img
+{
+    width: 200px;
+}
+div#logoimage
+ {
+    box-sizing: border-box;
+    width: 200px;
+}
+
+}
+
+@media screen and (max-width:1116px)
+{
+
+   a#payment
+   {
+      display: none;
+   }
+
+   a.bxs-credit-card
+   {
+      display: block;
+   }
+
+  
+}
+
+@media screen and (max-width:1042px)
+
+{
+   a#delivery
+   {
+      display:none;
+   }
+
+   a.bxs-package
+   {
+      display: block;
+   }
+
+  
+
+}
+@media screen and (max-width:977px)
+{
+   a#contact
+   {
+      display:none;
+   }
+   a.bxs-contact
+   {
+      display: block;
+   }
+
+   
+   
+}
+
+@media screen and (max-width:885px)
+{
+   a#product
+   {
+      display:none;
+   }
+
+   a.bxs-category
+   {
+      display: block;
+   }
+
+   li.subitem a 
+   {
+      font-size: 15px;
+   }
+
+   li.subitem a:hover
+   {
+      font-size: 15px;
+      transition: none;
+   }
+
+   li.subitem a:active
+   {
+      font-size: 15px;
+   }
+
+   
+
+}
+
+@media screen and (max-width:824px)
+{
+   a#about
+   {
+      display:none;
+   }
+
+   a.bxs-detail
+   {
+      display: block;
+   }
+
+   
+}
+
+@media screen and (max-width:781px)
+{
+   a#home
+   {
+      display:none;
+   }
+
+   a.bxs-home-smile
+   {
+      display: block;
+   }
+
+}
+/* ===============================
+	            phone
+   ===============================
+*/
+
+@media screen and (min-width:740px)
+{
+   a.bx-menu
+   {
+      display:none;
+   }
+
+}
+
+@media screen and (max-width:740px)
+{
+   div#navicon
+   {
+      order:0;
+   }
+
+   a.bx-menu
+   {
+      display:block;
+   }
+
+   header
+   {
+      justify-content: center;
+   }
+
+
+   a.bxs-credit-card,a.bxs-package,a.bxs-contact, a.bxs-category, a.bxs-detail,a.bxs-home-smile
+   {
+      display:none;
+   }
+
+
+  
+
+}
+@media screen and (max-width: 481px)
+{
+   a.bx-menu
+   {
+      display:flex;
+   }
+}
+
+
+div.container
+{
+   background-color: #c4dfdf;
+}
+
+
+
+

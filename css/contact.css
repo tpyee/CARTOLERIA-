@@ -1,0 +1,167 @@
+/*We'd Love To Hear From You!*/
+.header_start{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px; 
+}
+
+.header_start > h1{
+    font-size: 35px; 
+    color: #333; 
+    margin: 0; 
+}
+
+/*icon image*/
+.icon{
+    width: 40px;
+    padding: 10px;
+}
+
+/*--------------------------*/
+
+/*
+.contact_methods{
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 200px 60px 200px;
+    background-color: #c4dfdf;
+}*/
+.info{
+    padding-left: 8%;
+    padding-right: 4%;
+    float: left;
+}
+
+.info h3{
+    font-size: 21pt;
+    color: #0056b3;
+
+}
+
+.container{
+    width: 400px;
+}
+
+.info p{
+    font-size: 17pt;
+}
+
+.info a{
+    margin: 10px;
+    text-decoration: none;
+    font-size: 15pt;
+    font-weight: normal;
+    color: black;
+
+}
+
+.info a:hover{
+    font-size: 19pt;
+    text-shadow: 0 0 10px lightgoldenrodyellow;
+    text-decoration: underline;
+}
+
+
+.contact_method:hover{
+    background-color: #ddd;
+}
+
+.icon img{
+    width: 70px;
+}
+
+.map{
+    padding-bottom: 40px;
+}
+
+/*feedback part*/
+.header_feedback{
+    padding-top: 50px;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px; 
+}
+
+.feedback_form{
+    /*support old browser*/
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url('/image/feedback.jpeg') no-repeat;
+    /*support latest browser*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/image/feedback.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+.feedback_form form {
+  font-family: "Poppins",sans-serif;
+  width: 480px;
+  margin: 15px auto;
+  text-align: center;
+  padding: 25px;
+  border-radius: 30px;
+  background-color: #f5f5f5;
+  box-shadow: 8px 8px 5px rgba(128, 128, 128, 0.5);
+}
+
+form h1 {
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+form input,
+form textarea {
+  width: 90%;
+  padding: 10px 10px 10px 10px;
+  margin: 8px 0;
+  border: 1px solid #5c5c5c;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus{
+  outline: none;
+  border: 2px solid #c4dfdf;
+}
+
+form button {
+  margin-top: 10px;
+  border: none;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+@media(max-width:768px){
+    .header_container{
+        padding-top: 70px;
+        padding-bottom: 30px;
+        margin: 0; 
+    }
+    .header_container > h1{
+        font-size: 25pt; 
+        color: #333; 
+        margin: 0; 
+    }
+    .contact_method {
+        padding: 8px;
+        font-size: 10pt;
+        width: 120px;
+        height: 120px;
+    }
+    .contact_methods{
+        padding: 10%;
+    }
+    .icon img{
+        width: 30px;
+    }
+}

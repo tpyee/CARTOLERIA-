@@ -1,0 +1,138 @@
+/*  ==============
+    payment.html
+    ==============
+*/
+
+.select{
+    width: 500px;
+    margin: 25px auto;
+    font-size: 17pt;
+    padding-top: 70px;
+    padding-left: 16%;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+}
+.select h1{
+    font-size: 35px; 
+    color: #333; 
+    margin: 0; 
+    text-align: center;
+    padding-bottom: 20px;
+}
+.pay-image{
+    padding-top: 13%;
+    padding-bottom: 7%;
+}
+.select img{
+    width: 129px;
+    padding-right: 10px;
+    
+}
+.select h3{
+    color: #0056b3;
+    font-size: 21pt;
+    padding-top: 30px;
+}
+.select a{
+    color: #333;
+    text-decoration: none;
+}
+.select a:hover{
+    text-shadow: 0 10px 10px#7ddbfa;
+    font-size: larger;
+}
+
+.payment-option{
+    text-align: center;
+}
+
+
+
+/*  ==============================
+    payment1.html , payment2.html 
+    ==============================
+*/
+
+.info{
+    width: 350px ;
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px ;
+}
+.info h3{
+    color: #0056b3;
+    text-align: center;
+}
+.info h5{
+    color: grey;
+    padding-right: 10px;
+}
+.info input{
+    width: 200px;
+    height: 25px;
+    font-weight: normal;
+    color: gray;
+    font-size: 8pt;
+}
+
+
+/*button*/
+input[type=submit]{
+    border-radius: 12px;
+    width: 100px;
+    height: 30px;
+    color: #0056b3;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: transparent;
+}
+input[type=submit]:hover{
+    background-color: #0056b3;
+    color: white;
+    border: 0;
+}
+
+
+/*  ==============
+    payment3.html
+    ==============
+*/
+#online-banking-info{
+    margin: 100px auto;
+    width: 400px;
+    padding: 20px;
+}
+
+.left{
+    float: left;
+    padding-right: 40px;
+}
+
+
+/*  ==============
+    payment4.html
+    ==============
+*/
+
+.success-mess img{
+    padding-top: 3%;
+    width: 200px;
+    margin: 30px auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.success-mess p{
+    color: rgb(120, 212, 120);
+    text-align: center;
+    font-size: 25pt;
+    padding: 0%;
+}
+
+.success-mess h6{
+    text-align: center;
+    font-size: 18pt;
+}

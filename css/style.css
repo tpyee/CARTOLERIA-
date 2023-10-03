@@ -1,0 +1,50 @@
+/*TITLE STYLE*/
+div.title
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+div.title h2 a
+{
+    text-decoration: none;
+    color: #387070;
+    margin-left:20px;
+}
+
+div.title h2 a:hover
+{
+    opacity: 0.8;
+}
+div.title h2 a:active
+{
+    opacity: 0.6;
+}
+div.title button
+{
+    font-size: 18px;
+    border-style: none;
+    background-color:#c4dfdf;
+    padding: 5px 23px 5px 23px;
+    color: #387070;
+    margin-right: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+div.title button:hover
+{
+    background-color: #73abab80;
+    transition: 0.2;
+}
+
+div.title button:active
+{
+    background-color: #387070;
+    color:#c4dfdf;
+    transition:0.2s;
+    box-shadow: 20px 10px 50px #46787876;
+}
+

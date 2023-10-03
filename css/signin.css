@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/*
+body{
+  display: block;
+  background: url("/image/signin.jpeg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}*/
+
+/*For login form */
+/*Default screen sizes*/
+.wrapper {
+  width: 720px;
+  height: 480px;
+  margin: 100px auto ;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: stretch;
+  /*border: 2px solid rgba(255,255,255,.2);*/
+}
+
+.wrapper1,
+.wrapper2 {
+  flex: 1; 
+  padding: 25px; 
+  /*background: transparent;*/
+}
+
+.wrapper1{
+  font-size: 10pt;
+  width: 100px;
+  color: black;
+}
+
+
+div > input{
+  margin-right: 10px;
+}
+
+label{
+  font-size: 10pt;
+}
+
+.input-box {
+  margin-bottom: 13px;
+}
+
+.input-box input {
+  width: 94.5%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+  color: #ccc;
+}
+
+input[type=text]:focus{
+  background-color: rgb(222, 242, 249);
+}
+
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.forgot label {
+  display: flex;
+  align-items: center;
+}
+
+.forgot a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 9pt;
+}
+
+.forgot a:hover {
+  color: blueviolet;
+}
+
+.button {
+  background-color: #4add8f;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  background-color: #0600b3;
+}
+
+.register{
+  text-align: center;
+}
+
+.register-link {
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+}
+
+.register-link {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 10pt;
+}
+
+.register-link:hover {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+/*For tablet size*/
+
+@media(max-width:768px){
+    
+    body{
+        background-size: 700px 1200px;
+    }
+    .wrapper{
+        max-width: 80%;
+    }
+
+    .input-box i {
+        right: 40px;
+    }
+}
+
+/*For phone size*/
+
+@media(max-width:480px){
+    .wrapper{
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .wrapper h1{
+        font-size: 20px;
+    }
+
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"); 
+
+#image {
+  width: 940px;
+  height: 360px;
+  background-image: url('../images/footer-bg.jpg');
+}
+
+#image .blur {
+  background-image: url('../images/footer-bg.jpg');
+  background-position: center right;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+  filter: blur(3px);
+  float: right;
+  
+}
+  
